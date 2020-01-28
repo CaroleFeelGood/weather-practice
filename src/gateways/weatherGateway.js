@@ -6,7 +6,6 @@
 //const weatherAPI = `https://${host}/forecast/${key}/`
 
 export const fetchWeather = async (lat, long) => {
-    // implement this
-    return `Not implemented yet, but your input params are ${lat} and ${long}`
-}
-
+  // implement this
+  return `Not implemented yet, but your input params are ${lat} and ${long}`;
+};
