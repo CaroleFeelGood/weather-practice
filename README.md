@@ -21,6 +21,7 @@ That's it, we're running! You should see a message that says `Ready on port 3000
 Ok, now that we've got the project running and have had a chance to look through the code, you should quickly see that (surprise) nothing works! Your assingment has two parts:
 
 1. Get this code running! Once you're done, we want the single endpoint that we have now to match [this api contract]()
+    a. Only worry about implemeting the 200 status to start, the error codes can come after!
 2. Add another endpoint! This can do whatever you want, with one caveat - it _has_ to use teh weather api AND another source of data. Ideally this will be another api, but it can be anything you want. This new endpoint needs to follow our existing pattern, and be fully documented.
 
 Working in groups here is encouraged, even just as accountability buddies. Once you're done the project (take as long as you want, and do the best you can) you can submit it for review!
