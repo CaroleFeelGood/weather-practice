@@ -1,11 +1,14 @@
 import express from 'express';
 import morgan from 'morgan';
 import chalk from 'chalk';
+import { config } from './config.js'
 
 import { getWeather } from './controllers/weatherController.js';
 
 const app = express();
-const port = process.env.port || 3000;
+const port = config.get('app.port');
+
+// set up logger
 const accessLogger = morgan(function (tokens, req, res) {
     return [
         chalk.hex('#34ace0').bold(tokens.method(req, res)),
@@ -16,15 +19,18 @@ const accessLogger = morgan(function (tokens, req, res) {
     ].join(' ');
 });
 
-// set up logger
+
 app.use(accessLogger)
 
 app.get('/', (req, res) => res.send('Nothing here yet!'));
+
 app.get('/weather', async (req, res) => {
-    res.json(await getWeather());
+    const { query } = req;
+    const weather = await getWeather(query);
+    res.json(weather);
 });
 
 app.listen(
     port,
-    () => console.log(`Ready on port ${port}!`)
+    () => console.log(`Ready on port ${chalk.hex('#34ace0').bold(port)}!`)
 );

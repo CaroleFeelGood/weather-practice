@@ -1,19 +1,25 @@
 {
-  "name": "test-server",
+  "name": "weather-something",
   "version": "1.0.0",
-  "description": "",
+  "description": "An api playground!",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "start": "nodemon --experimental-modules src/index.js"
+    "start": "nodemon -r esm src/index.js",
+    "lint": "eslint src/**/*"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Quinn Langille",
+  "license": "MIT",
   "dependencies": {
     "chalk": "^3.0.0",
+    "convict": "^5.2.0",
+    "dotenv": "^8.2.0",
+    "esm": "^3.2.25",
     "express": "^4.17.1",
     "morgan": "^1.9.1",
     "nodemon": "^2.0.2",
     "superagent": "^5.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0"
   }
 }

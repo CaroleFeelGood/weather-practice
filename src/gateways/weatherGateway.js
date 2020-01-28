@@ -1,8 +1,12 @@
-import request from 'superagent';
+// Uncomment this stuff when you implement!
 
-const weatherAPI = 'https://api.darksky.net/forecast/bdc49c149699474b183318c850b6be17/'
+//import request from 'superagent'
+//import { config } from '../config.js';
+//const { key, host } = config.get('darkskies');
+//const weatherAPI = `https://${host}/forecast/${key}/`
 
-export const fetchWeather = async (coordinates) => {
+export const fetchWeather = async (lat, long) => {
     // implement this
+    return `Not implemented yet, but your input params are ${lat} and ${long}`
 }
 
