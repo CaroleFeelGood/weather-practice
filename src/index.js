@@ -30,5 +30,5 @@ app.get("/weather", async (req, res) => {
 });
 
 app.listen(port, () =>
-  console.log(`Ready on port ${chalk.hex("#34ace0").bold(port)}!`)
+  console.log(`🚀 Ready on port ${chalk.hex("#34ace0").bold(port)}!`)
 );
